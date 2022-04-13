@@ -1,0 +1,198 @@
+<!-- HTML Anatomy -->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ignazio Balistreri">
+  <meta name="description"
+    content="The Website Portfolio aims to provide
+    information and accessablitiy to the Student Journey, Projects and Work Future Software Engineer Ignazio Balisteri, current Software Engineering student of the CODE University in Berlin 2022.">
+
+  <!-- CSS styles -->
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/contact-button.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+
+  <title>Ignazio Balistreri | Software Engineering Student</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1> Ignazio Balistreri </h1>
+    <ul class="navigation">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+    </ul>
+    <ul class="navbar-mid">
+      <li><a href="signup.html"></a>
+        <button class="btn btn-dark-outline">Sign Up</button>
+      </li>
+      <li><a href="login.html"></a>
+        <button class="btn btn-dark">Log In</button>
+      </li>
+    </ul>
+    <button class="burger-menu" id="burger-menu">
+      <ion-icon class="bars" name="menu-outline"></ion-icon>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <img src="/images/business1.jpg" alt="Ignazio Balistreri" loading="lazy" class="hero-img">
+    <div class="bio animate__animated animate__shakeX">
+      <h2 class="bio-title">About Me</h2>
+      <p class="bio-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
+        dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
+        inventore tempore minus nemo, iste ullam illo laboriosam maiores
+        repudiandae quos!
+      </p>
+    </div>
+  </section>
+  <!-- More about -->
+  <section class="more-about">
+    <h2>More About Me</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+      nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum,
+      autem deleniti cupiditate molestias quis unde quae totam porro dicta
+      iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
+      nostrum dolor minus, libero delectus praesentium perferendis
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+      consequuntur labore? Ea totam voluptas amet!
+    </p>
+  </section>
+
+  <!-- Skills section -->
+  <section class="skills" id="skills">
+    <h2 class="skill-header">My Top Skills</h2>
+    <div class="skills-wrapper">
+      <div class="first-set animate__animated animate__pulse">
+
+        <img src="/images/icons8-python.svg" alt="" loading="lazy" class="icon icon-card">
+        <img src="/images/icons8-css3.svg" alt="" loading="lazy" class="icon icon-card">
+      </div>
+      <div class="second-set animate__animated animate__pulse">
+        <img src="/images/icons8-css3.svg" alt="" loading="lazy" class="icon icon-card">
+        <img src="/images/icons8-html-5.svg" alt="" loading="lazy" class="icon icon-card">
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2 class="projects-title">Some of my Recent Projects</h2>
+    <div class="projects-container">
+      <div class="project-container project-card">
+        <img src="/images/susumuai.png" alt="Susumu AI" loading="lazy" class="project-pic" />
+        <h3 class="project-title">Susumu AI</h3>
+        <p class="project-details">
+          Susumu AI is a berlin based fasshion base. The founders
+          produce high-end fashion products. They use kimono fabrics
+          from Japan to produce handcrafted fashion.
+        </p>
+        <a href="#" target="_blank" class="project-link">Check it Out</a>
+      </div>
+      <div class="project-container project-card">
+        <img src="/images/slash-homepage.png" alt="Slash" loading="lazy" class="project-pic" />
+        <h3 class="project-title">//Slash_</h3>
+        <p class="project-details">
+          The //Slash Hackathon unites like-minded people to come together
+          during a Hackathon and work on ideas that make the world a better place
+          with the theme of sustainablility.
+        </p>
+        <a href="#" target="_blank" class="project-link">Check it Out</a>
+      </div>
+      <div class="project-container project-card">
+        <img src="/images/fb-ads-screenshot.png" alt="IMB media" loading="lazy" class="project-pic" />
+        <h3 class="project-title">Performance Marketing</h3>
+        <p class="project-details">
+          I developed exclusive marketing startegies together with small
+          business to improve their online visibility and overall revenue
+          through performance marketing.
+        </p>
+        <a href="#" target="_blank" class="project-link">Check it Out</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section class="contact" id="contact">
+    <h2>Get In Touch With Me</h2>
+    <div class="contact-form-container">
+      <div class="contact-form">
+        <form action="https://formspree.io/f/meqnkvqw" method="POST">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="sender-name" placeholder="Enter Your name" class="input-field" required>
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field"
+              required>
+          </div>
+          <div class="form-control">
+            <label for="message">Message</label>
+            <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message"
+              class="input-field" required></textarea>
+          </div>
+          <button class="cta" id="svg" type="submit">
+            Submit
+            <svg width="13px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll to top -->
+  <div class="socials">
+    <a href="#" target="_blank">
+      <img src="/images/icons8-github.svg" alt="Github" loading="lazy" class="socialsicon">
+    </a>
+    <a href="#" target="_blank">
+      <img src="/images/icons8-instagram.svg" alt="Instagram" loading="lazy" class="socialsicon">
+    </a>
+    <a href="#" target="_blank">
+      <img src="/images/icons8-linkedin.svg" alt="LinkedIn" loading="lazy" class="socialsicon">
+    </a>
+    <a href="#" target="_blank">
+      <img src="/images/icons8-xing.svg" alt="Xing" loading="lazy" class="socialsicon">
+    </a>
+  </div>
+
+  <i class="scroll-up" id="scroll-up">
+    <img src="/images/icons8-doppelt-hoch.gif" class="socialsicon up-arrow" alt="">
+  </i>
+
+  <!-- Social accounts - fixed at the bottom in Footer section -->
+  <footer>
+    <p class="copy">&copy; Copyright 2022</p>
+    <p class="copy">
+      Built with &#x2661; by
+      <a href="#" target="_blank">
+        Ignazio Balistreri</a>
+    </p>
+  </footer>
+
+  <!-- Website scripts -->
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
