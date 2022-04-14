@@ -56,6 +56,7 @@ body {
     font-family: var(--font-family);
 }
 
+/*Navbar */
 nav {
     position: sticky;
     top: 0;
