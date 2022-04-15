@@ -30,5 +30,61 @@
           <ion-icon class="bars" name="menu-outline"></ion-icon>
         </button>
       </nav>
+      <section class="Signup" id="Signup">
+        <h2>Sign Up</h2>
+        <div class="Signup-form-container">
+          <div class="Signup-form">
+            <form action="https://formspree.io/f/meqnkvqw" method="POST">
+              <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="sender-name" placeholder="Enter Your name" class="input-field" required>
+              </div>
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field"
+                  required>
+              </div>
+              <div class="form-control">
+                <label for="message">Message</label>
+                <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message"
+                  class="input-field" required></textarea>
+              </div>
+              <button class="btn btn-dark-outline" id="svg" type="submit">
+                Sign Up
+                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      <div class="divider"></div>
+      <footer class="footer">
+          <div class="footer-container">
+              <div class="social">
+                <a href="#" target="_blank">
+                    <img src="/images/icons8-github.svg" alt="Github" loading="lazy" class="socialsicon">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="/images/icons8-instagram.svg" alt="Instagram" loading="lazy" class="socialsicon">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="/images/icons8-linkedin.svg" alt="LinkedIn" loading="lazy" class="socialsicon">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="/images/icons8-xing.svg" alt="Xing" loading="lazy" class="socialsicon">
+                  </a>
+              </div>
+              <p class="copy">&copy; Copyright 2022</p>
+              <p class="copy">
+                Built with &#x2661; by
+                <a href="index.html" target="_blank">
+                  Ignazio Balistreri</a>
+              </p>
+          </div>
+      </footer>
 </body>
 </html>

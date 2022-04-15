@@ -9,6 +9,7 @@
     font-weight: var(--bold-font);
     font-size: 1.125rem;
     vertical-align: middle;
+    cursor: pointer;
   }
   .cta:before {
     content: "";
