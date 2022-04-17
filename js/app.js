@@ -2,7 +2,7 @@
 const scrollUp = document.querySelector("#scroll-up");
 
 // Select nav links
-const navLink = document.querySelectorAll(".nav-link");
+//const navLink = document.querySelectorAll(".nav-link");
 
 // Scroll to top functionality
 scrollUp.addEventListener("click", () => {
@@ -24,3 +24,4 @@ function navToggle() {
 }
 
 btn.addEventListener("click", navToggle)
+

@@ -56,7 +56,7 @@ body {
     font-family: var(--font-family);
 }
 
-/*Navbar */
+/* Navbar */
 nav {
     position: sticky;
     top: 0;
@@ -296,13 +296,6 @@ nav ul li {
     font-size: 0.875rem;
     outline: none;
 }
-
-/* button {
-    border: none;
-    background: transparent;
-    font-weight: var(--bold-font);
-    z-index: 1;
-}*/
 
 .input-field::placeholder {
     padding: 0.5rem;
