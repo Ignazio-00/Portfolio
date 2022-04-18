@@ -1,4 +1,5 @@
 <!-- HTML Anatomy -->
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -12,15 +13,16 @@
     information and accessablitiy to the Student Journey, Projects and Work Future Software Engineer Ignazio Balisteri, current Software Engineering student of the CODE University in Berlin 2022.">
 
   <!-- CSS styles -->
-  <link rel="stylesheet" href="/styles/style.css">
-  <link rel="stylesheet" href="/styles/contact-button.css">
-  <link rel="stylesheet" href="/styles/LogSign.css">
+  <link rel="stylesheet" href="/website/styles/style.css">
+  <link rel="stylesheet" href="/website/styles/contact-button.css">
+  <link rel="stylesheet" href="/website/styles/LogSign.css">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 
-  <title>Ignazio Balistreri | Software Engineering Student</title>
+  {% block title %}zeig dich{% endblock %}
+  <!-- <title>Ignazio Balistreri | Software Engineering Student</title> -->
 </head>
 
 <body>
@@ -34,7 +36,7 @@
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
     <ul class="navbar-mid">
-      <li><a href="login.html" class="nav-link">Sign Up</a>
+      <li><a href="signup.html" class="nav-link">Sign Up</a>
       </li>
       <li><a href="login.html" class="nav-link">Log In</a>
       </li>
@@ -67,6 +69,7 @@
     <img src="/images/business1.jpg" alt="Ignazio Balistreri" loading="lazy" class="hero-img">
     <div class="bio animate__animated animate__shakeX">
       <h2 class="bio-title">About Me</h2>
+      {% block content %}{% endblock %}
       <p class="bio-text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
         dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
@@ -206,6 +209,6 @@
   </footer>
 
   <!-- Website scripts -->
-  <script src="/js/app.js"></script>
+  <script src="/website/js/app.js"></script>
 </body>
 </html>

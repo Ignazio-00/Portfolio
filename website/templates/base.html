@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/website/styles/style.css">
+        <link rel="stylesheet" href="/website/styles/contact-button.css">
+        <link rel="stylesheet" href="/website/styles/LogSign.css">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+<body>
+    <!-- Navbar -->
+  <nav>
+    <h1> Ignazio Balistreri </h1>
+    <ul class="navigation">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <ul class="navbar-mid">
+      <li><a href="signup.html" class="nav-link">Sign Up</a>
+      </li>
+      <li><a href="login.html" class="nav-link">Log In</a>
+      </li>
+    </ul>
+    <!-- Hamburger Menu -->
+    <button type="button" class="hamburger" id="menu-btn">
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+  </nav>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden" id="menu">
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    
+        <div class="mobile-menu-bottom">
+          <button class="btn btn-dark-outline">Sign In</button>
+          <button class="btn btn-dark">Log In</button>
+        </div>
+      </div>
+    <div class="container">{% block content %}{% endblock %}</div>
+    <script src="/website/js/second.js"></script>
+    <script src="/website/js/app.js"></script>
+</body>
+</html>
