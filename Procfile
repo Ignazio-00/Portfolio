@@ -1,1 +1,1 @@
-web: gunicorn PORTFOLIO:app
+web: gunicorn app
