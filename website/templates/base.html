@@ -7,7 +7,7 @@
     <meta name="author" content="Ignazio Balistreri">
     <meta name="description"
       content="The Website Portfolio aims to provide
-      information and accessablitiy to the Student Journey, Projects and Work Future Software Engineer Ignazio Balisteri, current Software Engineering student of the CODE University in Berlin 2022.">
+      information and accessability to the Student Journey, Projects and Work Future Software Engineer Ignazio Balisteri, current Software Engineering student of the CODE University in Berlin 2022.">
   
     <title>{% block title %}Ignazio Balistreri | Software Engineering Student{% endblock %}</title>
   
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href='../static/css/contact-button.css'>
     <link rel="stylesheet" href='../static/css/LogSign.css'>
     <link rel="stylesheet" href='../static/css/style.css'>
+
   
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
@@ -24,7 +25,7 @@
 <body>
   <!-- Navbar -->
   <nav>
-    <h1> Ignazio Balistreri </h1>
+    <h1><a href="index">Ignazio Balistreri</a></h1>
     <ul class="navigation">
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -32,10 +33,12 @@
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
     <ul class="navbar-mid">
-      <li><a href="signup" class="nav-link">Sign Up</a>
-      </li>
-      <li><a href="login" class="nav-link">Log In</a>
-      </li>
+      {% if user.is_authenticated %}
+        <li><a href="logout" class="nav-link">Logout</a></li>
+      {% else %}
+        <li><a href="signup" class="nav-link">Sign Up</a></li>
+        <li><a href="login" class="nav-link">Log In</a></li>
+      {% endif %}
     </ul>
     <!-- Hamburger Menu -->
     <button type="button" class="hamburger" id="menu-btn">
@@ -51,15 +54,27 @@
       <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="/logout" class="nav-link">Logout</a></li>
     </ul>
     
     <div class="mobile-menu-bottom">
-      <button class="btn btn-dark-outline">Sign In</button>
+      <button class="btn btn-dark-outline">Sign Up</button>
       <button class="btn btn-dark">Log In</button>
     </div>
   </div>
+  {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        {% if category == "error" %}
+          {{ message }}
+        {% else %}
+          {{ message }}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
   <div>{% block content %}{% endblock %}</div>
-  <script src="../js/app.js"></script>
-  <script src="../js/second.js"></script>
+  <script src="../static/js/app.js"></script>
+  <script src="../static/js/second.js"></script>
 </body>
 </html>
