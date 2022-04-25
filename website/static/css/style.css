@@ -361,6 +361,17 @@ footer {
     z-index: 99;
 }
 
+.create-post {
+    padding: 10px 20px;
+    margin: 10px 10px;
+    border: 2px solid var(--primary-shadow);
+    text-align: center;
+}
+.create-post-h2 {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
 /* Mobile Menu */
 .mobile-menu {
     position: fixed;
@@ -403,6 +414,7 @@ footer {
 .no-scroll {
     overflow: hidden;
 }
+
 
 @media screen and (max-width: 45rem) {
     /* width of 45rem/720px and below */
