@@ -25,3 +25,7 @@ function navToggle() {
 
 btn.addEventListener("click", navToggle)
 
+// Dropdown menu posts
+const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
+EventHandler.on(document, clickEvent, '[data-bs-dismiss="{alert}"]')
+

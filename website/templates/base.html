@@ -66,20 +66,20 @@
     {% if messages %}
       {% for category, message in messages %}
         {% if category == "error" %}
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <div class="alert alert-danger alert-dismissible fade" role="alert">
           {{ message }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <button type="button" data-bs-dismiss="alert" class="btnf-close" src="/website/static/images/icons8-löschen.svg"></button>
         </div>
         {% else %}
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="alert alert-success alert-dismissible fade" role="alert">
           {{ message }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <button type="button" class="btnf-close" data-bs-dismiss="alert"></button>
         </div>
         {% endif %}
       {% endfor %}
     {% endif %}
   {% endwith %}
-  <div>{% block content %}{% endblock %}</div>
+  <div class="container">{% block content %}{% endblock %}</div>
   <script src="../static/js/app.js"></script>
   <script src="../static/js/second.js"></script>
 </body>
