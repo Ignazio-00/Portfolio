@@ -12,9 +12,8 @@
     <title>{% block title %}Ignazio Balistreri | Software Engineering Student{% endblock %}</title>
   
     <!-- Styles -->
-    <link rel="stylesheet" href='../static/css/contact-button.css'>
-    <link rel="stylesheet" href='../static/css/LogSign.css'>
-    <link rel="stylesheet" href='../static/css/style.css'>
+    <link rel="stylesheet" href='/static/css/LogSign.css'>
+    <link rel="stylesheet" href='/static/css/style.css'>
 
   
     <!-- Favicon -->
@@ -66,9 +65,9 @@
     {% if messages %}
       {% for category, message in messages %}
         {% if category == "error" %}
-        <div class="alert alert-danger alert-dismissible fade" role="alert">
+        <div id="btn-danger" class="alert alert-danger alert-dismissible fade" role="alert">
           {{ message }}
-          <button type="button" data-bs-dismiss="alert" class="btnf-close" src="/website/static/images/icons8-löschen.svg"></button>
+          <button id="btn-danger" type="button" data-bs-dismiss="alert" class="btnf-close">&#88;</button> 
         </div>
         {% else %}
         <div class="alert alert-success alert-dismissible fade" role="alert">
@@ -79,8 +78,9 @@
       {% endfor %}
     {% endif %}
   {% endwith %}
-  <div class="container">{% block content %}{% endblock %}</div>
-  <script src="../static/js/app.js"></script>
-  <script src="../static/js/second.js"></script>
+  <div>{% block content %}{% endblock %}</div>
+  <script src="/static/js/app.js"></script>
+  <script src="/static/js/second.js"></script>
+  <script src="/static/js/third.js"></script>
 </body>
 </html>

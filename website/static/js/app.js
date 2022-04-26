@@ -2,16 +2,7 @@
 const scrollUp = document.querySelector("#scroll-up");
 
 // Select nav links
-//const navLink = document.querySelectorAll(".nav-link");
-
-// Scroll to top functionality
-scrollUp.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-    });
-});
+const navLink = document.querySelectorAll(".nav-link");
 
 // Hamburger Menu
 const btn = document.getElementById("menu-btn")
@@ -27,5 +18,12 @@ btn.addEventListener("click", navToggle)
 
 // Dropdown menu posts
 const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
-EventHandler.on(document, clickEvent, '[data-bs-dismiss="{alert}"]')
+// EventHandler.on(document, clickEvent, '[data-bs-dismiss="{alert}"]')
+
+function change(){
+    document.getElementById("btn-danger").className = "close"
+}
+
+// 
+document.getElementById("btn-danger").addEventListener('click', change) 
 
