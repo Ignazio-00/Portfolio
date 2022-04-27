@@ -1,12 +1,16 @@
 {% extends "posts_div.html" %} {% block title %}Title{% endblock %} 
 {% block content %}
-<h1>Make a post</h1>
-<form method="POST">
-    <textarea name="text" id="text"></textarea>
+<form method="POST" class="containerf">
+    <h1>Make a post</h1>
+    <textarea name="text" id="text" placeholder="Post something fun 😄" cols="75" rows="14"></textarea>
     <br>
-    <div>
+    <div style="flex-shrink: 0;" class="h2">
         <button type="submit" class="button">Post</button>
     </div> 
 </form>
 <br>
+<div class="h2">
+    <a href="/index">
+        <button type="button" class="btnf btnf-lg btnf-secondary">Back</button></a>
+</div>
 {% endblock %}

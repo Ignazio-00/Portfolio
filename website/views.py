@@ -1,7 +1,11 @@
+from crypt import methods
 from unicodedata import name
 from flask import Blueprint, flash, redirect, render_template, request, flash, redirect, url_for
 from flask_login import login_required, current_user
-from .models import Post
+from importlib_metadata import method_cache
+
+from website.auth import login
+from .models import Post, User, Comment
 from . import db
 from website.models import User
 
@@ -57,8 +61,24 @@ def posts(username):
         flash("User does not exist.", category="error")
         return redirect(url_for("views.index"))
 
-    posts = Post.query.filter_by(author=user.id).all()
+    posts = user.posts
     return render_template("posts.html", user=current_user, posts=posts, username=username)
 
+@views.route("/create-comment/<post_id>", methods=["POST"])
+@login_required
+def create_comment(post_id):
+    text = request.form.get("text")
 
+    if not text:
+        flash("Comment cannot be empty.", category="error")
+    else:
+        post = Post.query.filter_by(id=post_id)
+        if post:
+            comment = Comment(text=text, author=current_user.id, post_id=post_id)
+            db.session.add(comment)
+            db.session.commit()
+        else:
+            flash("Post does not exist.", category="error")
+        
+    return redirect(url_for("views.index"))
 

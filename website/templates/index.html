@@ -41,7 +41,7 @@
   <!-- Hero Section -->
   {% block content %}
   <section class="hero" id="about">
-    <img src="../static/images/business1.jpg" alt="Ignazio Balistreri" loading="lazy" class="hero-img">
+    <img src="/static/images/business1.jpg" alt="Ignazio Balistreri" loading="lazy" class="hero-img">
     <div class="bio animate__animated animate__shakeX">
       <h2 class="bio-title">About Me</h2>
       <p class="bio-text">
@@ -78,12 +78,12 @@
     <div class="skills-wrapper">
       <div class="first-set animate__animated animate__pulse">
 
-        <img src="../static/images/icons8-python.svg" alt="" loading="lazy" class="icon icon-card">
-        <img src="../static/images/icons8-css3.svg" alt="" loading="lazy" class="icon icon-card">
+        <img src="/static/images/icons8-python.svg" alt="" loading="lazy" class="icon icon-card">
+        <img src="/static/images/icons8-css3.svg" alt="" loading="lazy" class="icon icon-card">
       </div>
       <div class="second-set animate__animated animate__pulse">
-        <img src="../static/images/icons8-css3.svg" alt="" loading="lazy" class="icon icon-card">
-        <img src="../static/images/icons8-html-5.svg" alt="" loading="lazy" class="icon icon-card">
+        <img src="/static/images/icons8-css3.svg" alt="" loading="lazy" class="icon icon-card">
+        <img src="/static/images/icons8-html-5.svg" alt="" loading="lazy" class="icon icon-card">
       </div>
     </div>
   </section>
@@ -92,7 +92,7 @@
     <h2 class="projects-title">Some of my Recent Projects</h2>
     <div class="projects-container">
       <div class="project-container project-card">
-        <img src="../static/images/susumuai.png" alt="Susumu AI" loading="lazy" class="project-pic" />
+        <img src="/static/images/susumuai.png" alt="Susumu AI" loading="lazy" class="project-pic" />
         <h3 class="project-title">Susumu AI</h3>
         <p class="project-details">
           Susumu AI is a berlin based fasshion base. The founders
@@ -102,7 +102,7 @@
         <a href="#" target="_blank" class="project-link">Check it Out</a>
       </div>
       <div class="project-container project-card">
-        <img src="../static/images/slash-homepage.png" alt="Slash" loading="lazy" class="project-pic" />
+        <img src="/static/images/slash-homepage.png" alt="Slash" loading="lazy" class="project-pic" />
         <h3 class="project-title">//Slash_</h3>
         <p class="project-details">
           The //Slash Hackathon unites like-minded people to come together
@@ -112,7 +112,7 @@
         <a href="#" target="_blank" class="project-link">Check it Out</a>
       </div>
       <div class="project-container project-card">
-        <img src="../static/images/fb-ads-screenshot.png" alt="IMB media" loading="lazy" class="project-pic" />
+        <img src="/static/images/fb-ads-screenshot.png" alt="IMB media" loading="lazy" class="project-pic" />
         <h3 class="project-title">Performance Marketing</h3>
         <p class="project-details">
           I developed exclusive marketing strategies together with small
@@ -152,44 +152,27 @@
 
   <!-- Create a post button -->
   <section class="create-post-section" id="create-post-section">
-    <h2>Want to create a post?</h2>
     <div>
-      <a href="/create-post"><button type="button" class="button">Create a Post</button></a>
+      <h2 class="h2">Want to create a post?</h2>
+      <a href="/create-post"><button type="button" class="button containerf">Create a Post</button></a>
     </div>
   </section>
   <!-- Socials -->
   <div class="socials">
     <a href="#" target="_blank">
-      <img src="../static/images/icons8-github.svg" alt="Github" loading="lazy" class="socialsicon">
+      <img src="/static/images/icons8-github.svg" alt="Github" loading="lazy" class="socialsicon">
     </a>
     <a href="#" target="_blank">
-      <img src="../static/images/icons8-instagram.svg" alt="Instagram" loading="lazy" class="socialsicon">
+      <img src="/static/images/icons8-instagram.svg" alt="Instagram" loading="lazy" class="socialsicon">
     </a>
     <a href="#" target="_blank">
-      <img src="../static/images/icons8-linkedin.svg" alt="LinkedIn" loading="lazy" class="socialsicon">
+      <img src="/static/images/icons8-linkedin.svg" alt="LinkedIn" loading="lazy" class="socialsicon">
     </a>
     <a href="#" target="_blank">
-      <img src="../static/images/icons8-xing.svg" alt="Xing" loading="lazy" class="socialsicon">
+      <img src="/static/images/icons8-xing.svg" alt="Xing" loading="lazy" class="socialsicon">
     </a>
   </div>
-
-  <!-- Scroll to top -->
-  <i class="scroll-up" id="scroll-up">
-    <img src="../static/images/icons8-doppelt-hoch.gif" class="socialsicon up-arrow" alt="">
-  </i>
-  <!-- Social accounts - fixed at the bottom in Footer section -->
-  <footer>
-    <p class="copy">&copy; Copyright 2022</p>
-    <p class="copy">
-      Built with &#x2661; by
-      <a href="#" target="_blank">
-        Ignazio Balistreri</a>
-      </p>
-    </footer>
     
-    <!-- Website scripts -->
-    <script src="../js/app.js"></script>
-    <script src="../js/second.js"></script>
     {% endblock %}
 </body>
 </html>

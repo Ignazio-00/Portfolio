@@ -17,8 +17,8 @@
 
   
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   
   </head>
 <body>
@@ -79,6 +79,19 @@
     {% endif %}
   {% endwith %}
   <div>{% block content %}{% endblock %}</div>
+    <!-- Social accounts - fixed at the bottom in Footer section -->
+    <footer>
+      <p class="copy">&copy; Copyright 2022</p>
+      <p class="copy">
+        Built with &#x2661; by
+        <a href="#" target="_blank">
+          Ignazio Balistreri</a>
+        </p>
+    </footer>
+      <!-- Scroll to top -->
+  <i class="scroll-up" id="scroll-up">
+    <img src="/static/images/icons8-doppelt-hoch.gif" class="socialsicon up-arrow" alt="">
+  </i>
   <script src="/static/js/app.js"></script>
   <script src="/static/js/second.js"></script>
   <script src="/static/js/third.js"></script>
