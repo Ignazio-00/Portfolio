@@ -28,6 +28,7 @@ def login():
                 flash("Invalid Password", category="error")
         else:
             flash("Invalid Email", category="error")
+            flash("Invalid Email", category="error")
 
     return render_template("login.html", user=current_user)
 

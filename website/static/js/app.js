@@ -19,12 +19,9 @@ btn.addEventListener("click", navToggle)
 // Dropdown menu posts
 const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
 
-// EventHandler.on(document, clickEvent, '[data-bs-dismiss="{alert}"]')
-
-function change(){
-    document.getElementById("btn-danger").className = "close"
-}
-
-// 
-document.getElementById("btn-danger").addEventListener('click', change) 
-
+// Alert handling
+document.querySelectorAll(".btnf-close").forEach(element => {
+    element.addEventListener('click', function(event){
+        event.target.parentElement.remove()
+    })
+});

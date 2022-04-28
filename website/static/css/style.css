@@ -475,10 +475,6 @@ footer {
     opacity: 0.5;
 }
 
-.close {
-    visibility: hidden;
-}
-
 .btnf-group {
     position: relative;
     display: inline-flex;

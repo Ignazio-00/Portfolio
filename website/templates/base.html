@@ -65,14 +65,14 @@
     {% if messages %}
       {% for category, message in messages %}
         {% if category == "error" %}
-        <div id="btn-danger" class="alert alert-danger alert-dismissible fade" role="alert">
+        <div class="alert alert-danger alert-dismissible fade" role="alert">
           {{ message }}
-          <button id="btn-danger" type="button" data-bs-dismiss="alert" class="btnf-close">&#88;</button> 
+          <button type="button" data-bs-dismiss="alert" class="btnf-close">&#88;</button> 
         </div>
         {% else %}
         <div class="alert alert-success alert-dismissible fade" role="alert">
           {{ message }}
-          <button type="button" class="btnf-close" data-bs-dismiss="alert"></button>
+          <button type="button" class="btnf-close" data-bs-dismiss="alert">&#88;</button>
         </div>
         {% endif %}
       {% endfor %}
