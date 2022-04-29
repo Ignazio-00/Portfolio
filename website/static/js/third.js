@@ -1,4 +1,5 @@
 // Scroll to top functionality
+// Scroll to top selection const scrollUp = document.querySelector("#scroll-up");
 scrollUp.addEventListener("click", () => {
     window.scrollTo({
     top: 0,
