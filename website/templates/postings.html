@@ -1,0 +1,75 @@
+{% extends "base.html" %} 
+{% block title %}{{username}}'s Posts{% endblock %} 
+{% block content %}
+<h2 class="h2">{% block header %}Take a look at other postings{% endblock %}</h2>
+<div id="posts">
+    {% for post in posts %}
+    <div class="card border-dark">
+        <div class="card-header">
+            <a href="/posts/{{post.user.username}}">{{post.user.username}}</a>
+            {% if user.id == post.author %}
+            <div class="btnf-group">
+                <button type="button" class="btnf btnf-sm btnf-primary dropdown-toggle" data-bs-toggle="dropdown">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="/delete-post/{{post.id}}" class="dropdown-item">Delete</a></li>
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+        <div class="card-body">
+            <div class="card-text">{{post.text}}</div>
+            <br>
+            <div class="collapse" id="comments-{{post.id}}">
+                <div class="card">
+                    <div class="card-body" id="comments-expanded-{{post.id}}">
+                        {% for comment in post.comments %}
+                        <div class="for-comment">
+                            <div>
+                                <a href="/posts/{{comment.user.username}}">{{comment.user.username}}</a>: {{comment.text}}
+                            </div>
+                            <div>
+                                <small class="text-muted">{{comment.date_created}}</small>
+                                {% if user.id == comment.author or user.id == post.author %}
+                                <!-- Add Css !!!-->
+                                <div class="btnf-group">
+                                    <button type="button" class="btnf btnf-sm btnf-primary dropdown-toggle" data-bs-toggle="dropdown"></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/delete-comment/{{comment.id}}" class="dropdown-item">Delete</a></li>
+                                    </ul>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <p class="card-text">
+                {% if post.comments|length > 0 %}
+                <a data-bs-toggle="collapse" href="#comments-{{post.id}}" role="button">
+                    <small>View {{post.comments|length}} Comments</small>
+                </a>
+                {% else %}
+                <small class="text-muted">No Comments</small>
+                {% endif %}
+            </p>
+            <form class="comment-form" method="POST" action="/create-comment/{{post.id}}">
+                <input type="text" id="text" name="text" class="form-control" placeholder="Comment on this post 🚀">
+                <button type="submit" class="btnf-secondary">Comment</button>
+            </form>
+        </div>
+        <div class="card-footer">{{post.date_created}}</div>
+    </div>
+    <br>
+    {% endfor %}
+    <div>
+        <a href="/index"><button type="button" class="btnf btnf-lg btnf-secondary">Back</button></a>
+    </div>
+</div>
+<div>
+    <h2 class="h2">Want to create a post?</h2>
+    <a href="/create-post"><button type="button" class="button containerf">Create a Post</button></a>
+</div>
+{% endblock %}
+

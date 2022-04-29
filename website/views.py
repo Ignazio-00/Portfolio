@@ -35,6 +35,13 @@ def create_post():
     posts = Post.query.all()
     return render_template("create_post.html", user=current_user, posts=posts)
 
+@views.route("/postings", methods=["GET", "POST"])
+@login_required
+def postings():
+    posts = Post.query.all()
+    print(posts)
+    return render_template("postings.html", user=current_user, posts=posts)
+
 # Check if Person is authorized to delete post via id
 @views.route("/delete-post/<id>")
 @login_required
