@@ -29,7 +29,7 @@
                                 <a href="/posts/{{comment.user.username}}">{{comment.user.username}}</a>: {{comment.text}}
                             </div>
                             <div>
-                                <small class="text-muted">{{comment.date_created}}</small>
+                                <small class="text-muted"> {{comment.date_created}}</small>
                                 {% if user.id == comment.author or user.id == post.author %}
                                 <div class="btnf-group">
                                     <button type="button" class="btnf btnf-sm btnf-primary dropdown-toggle" data-bs-toggle="dropdown"></button>
@@ -58,7 +58,7 @@
                 <button type="submit" class="btnf-secondary">Comment</button>
             </form>
         </div>
-        <div class="card-footer">{{post.date_created}}</div>
+        <div class="card-footer text-muted">{{post.date_created}}</div>
     </div>
     <br>
     {% endfor %}
