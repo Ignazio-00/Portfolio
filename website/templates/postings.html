@@ -9,10 +9,8 @@
             <a href="/posts/{{post.user.username}}">{{post.user.username}}</a>
             {% if user.id == post.author %}
             <div class="btnf-group">
-                <button type="button" class="btnf btnf-sm btnf-primary dropdown-toggle" data-bs-toggle="dropdown">
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="/delete-post/{{post.id}}" class="dropdown-item">Delete</a></li>
+                <ul>
+                    <li><a href="/delete-post/{{post.id}}">Delete</a></li>
                 </ul>
             </div>
             {% endif %}
@@ -20,7 +18,7 @@
         <div class="card-body">
             <div class="card-text">{{post.text}}</div>
             <br>
-            <div class="collapse" id="comments-{{post.id}}">
+            <div id="comments-{{post.id}}">
                 <div class="card">
                     <div class="card-body" id="comments-expanded-{{post.id}}">
                         {% for comment in post.comments %}
@@ -32,10 +30,9 @@
                                 <small class="text-muted">{{comment.date_created}}</small>
                                 {% if user.id == comment.author or user.id == post.author %}
                                 <!-- Add Css !!!-->
-                                <div class="btnf-group">
-                                    <button type="button" class="btnf btnf-sm btnf-primary dropdown-toggle" data-bs-toggle="dropdown"></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/delete-comment/{{comment.id}}" class="dropdown-item">Delete</a></li>
+                                <div>
+                                    <ul>
+                                        <li><a href="/delete-comment/{{comment.id}}">Delete</a></li>
                                     </ul>
                                 </div>
                                 {% endif %}
@@ -47,9 +44,7 @@
             </div>
             <p class="card-text">
                 {% if post.comments|length > 0 %}
-                <a data-bs-toggle="collapse" href="#comments-{{post.id}}" role="button">
-                    <small>View {{post.comments|length}} Comments</small>
-                </a>
+                <a href="#comments-{{post.id}}"></a>
                 {% else %}
                 <small class="text-muted">No Comments</small>
                 {% endif %}
