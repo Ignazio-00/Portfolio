@@ -29,7 +29,6 @@
                             <div>
                                 <small class="text-muted">{{comment.date_created}}</small>
                                 {% if user.id == comment.author or user.id == post.author %}
-                                <!-- Add Css !!!-->
                                 <div>
                                     <ul>
                                         <li><a href="/delete-comment/{{comment.id}}">Delete</a></li>

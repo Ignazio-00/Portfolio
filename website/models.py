@@ -5,7 +5,6 @@ from . import db
 from flask_login import UserMixin
 from sqlalchemy.sql import func
 
-
 # One to many relationship. One user can have multiple posts. One post can have multiple comments
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
