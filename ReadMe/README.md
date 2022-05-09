@@ -28,11 +28,11 @@ My personal portfolio is intended to showcase my work and make myself searchable
 
 ---
 
-## Technology stack / Cools
+## Technology stack / Tools
 
 Frontend: HTML, CSS, JavaScript
 Backend: Python
-Database: MySQL, Flask
+Database: PostgresSQL, Flask
 VS Code
 
 ---

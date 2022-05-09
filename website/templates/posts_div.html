@@ -8,13 +8,9 @@
         <div class="card-header">
             <a href="/posts/{{post.user.username}}">{{post.user.username}}</a>
             {% if user.id == post.author %}
-            <div class="btnf-group">
-                <button type="button" class="btnf btnf-sm btnf-primary dropdown-toggle" data-bs-toggle="dropdown">
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="/delete-post/{{post.id}}" class="dropdown-item">Delete</a></li>
+                <ul>
+                    <li><a href="/delete-post/{{post.id}}">Delete</a></li>
                 </ul>
-            </div>
             {% endif %}
         </div>
         <div class="card-body">
@@ -31,12 +27,9 @@
                             <div>
                                 <small class="text-muted"> {{comment.date_created}}</small>
                                 {% if user.id == comment.author or user.id == post.author %}
-                                <div class="btnf-group">
-                                    <button type="button" class="btnf btnf-sm btnf-primary dropdown-toggle" data-bs-toggle="dropdown"></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/delete-comment/{{comment.id}}" class="dropdown-item">Delete</a></li>
+                                    <ul>
+                                        <li><a href="/delete-comment/{{comment.id}}">Delete</a></li>
                                     </ul>
-                                </div>
                             </div>
                                 {% endif %}
                         </div>

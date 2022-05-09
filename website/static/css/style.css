@@ -56,6 +56,8 @@ body {
     font-family: var(--font-family);
 }
 
+
+
 /* Navbar */
 nav {
     position: sticky;
@@ -357,7 +359,7 @@ footer {
 .up-arrow {
     width: 3rem;
     height: 3rem;
-    z-index: 99;
+    z-index: 9999;
 }
 
 .create-post {
@@ -694,7 +696,7 @@ footer {
 }
 
 @media screen and (max-width: 26.25rem) {
-    /* width of 420px or 26.25rem */
+    /* width of 420px or 26.25rem or below */
     .hero img {
         height: 37.25rem;
         width: 23rem;
@@ -715,4 +717,26 @@ footer {
     .containerf {
         max-width: 17.75rem;
     }
+
+    h1 {
+        font-size: 1rem;
+    }
+    .textarea-media {
+        max-width: 100%;
+    }
+    .btnf {
+        padding:2px 4px;
+        font-size:80%;
+        line-height: 2;
+        border-radius: 0.7rem;
+    }
+    .button {
+        padding:4px 8px;
+        font-size:80%;
+        line-height: 2;
+    }
+    .copy {
+        font-size: 0.65rem;
+    }
+
 }
